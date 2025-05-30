@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-EcommerceMultivendorApplication<ecommerce-multivendor>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.roy.EcommerceMultivendorApplication",
+      "projectName": "ecommerce-multivendor",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
