@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.roy.domain.USER_ROLE;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,6 +33,7 @@ public class User {
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private String password;
 
+  @Column(nullable = false, unique = true) // add by me
   private String email;
 
   private String fullName;
@@ -40,6 +42,8 @@ public class User {
 
   private USER_ROLE role = USER_ROLE.ROLE_CUSTOMER;
 
+  @Column(nullable = false)   //add by me
+  private boolean enabled = true;  
 
   @OneToMany
   private Set<Address> addresses = new HashSet<>();
